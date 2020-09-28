@@ -1,0 +1,6 @@
+flask
+exchangelib
+pymongo
+pyOpenSSL
+jsonschema
+pymustache

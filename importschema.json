@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://hippogriff/calendar/optin/import/1.0",
+  "description": "Import schema for opting into calendar data",
+  "type": "object",
+  "properties": {
+    "requestId": {
+      "type": "string",
+      "pattern": "(?i)^[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}$"
+    },
+    "lsemail": {
+      "type": "string",
+      "format": "email"
+    },
+    "lsid": {
+      "type": "string",
+      "pattern": "^\\d{5}$"
+    },
+    "action": {
+      "type": "string",
+      "enum": ["subscribe", "unsubscribe", "check"]
+    }
+  },
+  "required": ["lsemail", "lsid", "action"],
+  "additionalProperties": false
+}
