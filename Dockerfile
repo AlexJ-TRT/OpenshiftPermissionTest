@@ -15,6 +15,8 @@ RUN pip install -r requirements.txt
 RUN groupadd appgroup && \
     useradd -g appgroup appuser
 
+RUN chown -R appuser:appgroup /usr/sr
+
 # Change to non-root privilege
 USER appuser
 
